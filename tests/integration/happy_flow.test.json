@@ -1,0 +1,13 @@
+[
+  {
+    "conversation": [
+      {"user": "Hi"}, {"assistant": "ok"},
+      {"user": "I’m Ana, 34, need tax help"}, {"assistant": "ok"},
+      {"user": "Thanks"}, {"assistant": "ok"}
+    ],
+    "expected": {
+      "final_agent": "PdfGenerator",
+      "payload": {"keys": ["pdf_filename", "version", "url"]}
+    }
+  }
+]
