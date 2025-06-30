@@ -7,11 +7,14 @@ After successfully fixing the core pipeline and achieving end-to-end functionali
 ## 🎯 High Priority Improvements
 
 ### 1. Fix Collector Loop Issues
-**Problem**: The collector loop gets stuck in repetition, asking the same questions multiple times.
+**Problem**: The collector loop doesn't properly wait for user responses and gets stuck in repetition.
 **Solution**: 
-- Implement better state tracking to detect when sufficient information has been collected
-- Add a maximum iteration limit with graceful exits
-- Improve the exit_loop tool invocation logic
+- Implement proper turn-taking mechanism in the LoopAgent
+- Add state tracking to detect when sufficient information has been collected
+- Fix the API to properly handle async conversation flow
+- Add conversation context awareness to prevent repetitive questions
+- Implement a maximum iteration limit with graceful exits
+- Consider switching from LoopAgent to a state machine approach for better control
 
 ### 2. Parser Timing Control
 **Problem**: The parser triggers too early with incomplete data.
@@ -67,15 +70,30 @@ After successfully fixing the core pipeline and achieving end-to-end functionali
 - Implement more natural conversation transitions
 - Add context-aware follow-up questions
 - Support conversation branching
+- Fix collector loop to properly wait for user responses
+- Implement proper turn-taking in conversation
 
-### 11. Multi-Language Support
-- Extend beyond English/Spanish detection
-- Add language-specific CBT frameworks
-- Implement proper internationalization
+### 10a. Voice Input Support
+- Add voice-to-text capability for user messages
+- Integrate with Google Speech-to-Text API
+- Support multiple audio formats (WAV, MP3, OGG)
+- Add real-time transcription feedback
+- Consider text-to-speech for responses in future phases
 
-### 12. PDF Enhancements
-- Add custom branding options
-- Implement multiple PDF templates
+### 11. Advanced Multi-Language Support
+- Implement robust language detection with Google Cloud Translation API
+- Support 7+ languages (ES, EN, FR, DE, IT, PT, CA) with pattern-based fallback
+- Add language-specific exit commands (/salir, /sortir, /beenden, etc.)
+- Implement language-specific CBT frameworks and cultural adaptations
+- Add confidence scoring for language detection (pattern vs API)
+
+### 12. Enhanced PDF Reports
+- Include full conversation transcript in PDF
+- Add structured data section showing parsed intake information
+- Include both conversation summary AND structured data for analysis
+- Add follow-up conversation section if applicable
+- Generate personalized resources and learning materials
+- Store PDFs in Google Cloud Storage with 5-minute signed URLs
 - Support export to other formats (DOCX, HTML)
 
 ## 🔧 Technical Debt
@@ -138,12 +156,19 @@ After successfully fixing the core pipeline and achieving end-to-end functionali
 
 ## 🏗️ Infrastructure
 
-### 23. Deployment Automation
+### 23. Frontend Integration
+- Integrate with existing frontend at /Users/carlos/workspace/re-frame/frontend
+- Implement WebSocket support for real-time communication
+- Add proper CORS configuration
+- Create frontend SDK/client library
+- Support progressive web app features
+
+### 24. Deployment Automation
 - Create Terraform/Pulumi scripts
 - Implement blue-green deployments
 - Add automated rollback capabilities
 
-### 24. Scalability
+### 25. Scalability
 - Implement horizontal scaling
 - Add Kubernetes operators
 - Create auto-scaling policies
@@ -151,26 +176,26 @@ After successfully fixing the core pipeline and achieving end-to-end functionali
 ## 📝 Implementation Priority
 
 ### Phase 1 (Immediate - 1 week)
-1. Fix collector loop issues
+1. Fix collector loop issues (proper turn-taking)
 2. Fix parser timing
 3. Add integration tests
-4. Fix critical type annotations
+4. Frontend integration setup
 
 ### Phase 2 (Short-term - 2-4 weeks)
-5. Implement event streaming
-6. Add comprehensive error handling
-7. Improve conversation flow
-8. Add structured logging
+5. Implement advanced language detection with Google Cloud
+6. Add voice input support
+7. Enhance PDF reports with full transcripts
+8. Implement GCS storage for PDFs
 
 ### Phase 3 (Medium-term - 1-2 months)
-9. Performance optimizations
-10. Security enhancements
-11. Multi-language support
-12. Analytics implementation
+9. Complete frontend integration
+10. Add multi-language CBT frameworks
+11. Implement WebSocket support
+12. Add personalized resource generation
 
 ### Phase 4 (Long-term - 3+ months)
-13. Full architectural refactor
-14. Advanced AI features
+13. Full voice interaction (TTS)
+14. Advanced analytics dashboard
 15. Enterprise features
 16. Platform expansion
 
