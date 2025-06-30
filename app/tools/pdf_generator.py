@@ -56,15 +56,28 @@ def build_pdf_bytes(intake_data: dict, analysis_output: str) -> bytes:
     story.append(Paragraph("<b>1. Your Situation Snapshot</b>", styles["Heading2"]))
     story.append(Spacer(1, 0.1 * inch))
 
-    situation_data = [
-        ["Field", "Your Entry"],
-        ["Situation", intake_data.get("trigger_situation", "Not provided")],
-        ["Automatic Thought", f'"{intake_data.get("automatic_thought", "Not provided")}"'],
-        [
-            "Initial Emotion",
-            f'{intake_data.get("emotion_data", {}).get("emotion", "Unknown")} ({intake_data.get("emotion_data", {}).get("intensity", 0)}/10)',
-        ],
-    ]
+    # Handle both old format and new parsed format
+    if "situation" in intake_data:
+        # New format from parser
+        situation_data = [
+            ["Field", "Your Entry"],
+            ["Situation", intake_data.get("situation", "Not provided")],
+            ["Thoughts", ", ".join(intake_data.get("thoughts", ["Not provided"]))],
+            ["Feelings", ", ".join(intake_data.get("feelings", ["Not provided"]))],
+            ["Behaviors", ", ".join(intake_data.get("behaviors", ["Not provided"]))],
+            ["Outcome", intake_data.get("outcome", "Not provided")],
+        ]
+    else:
+        # Old format
+        situation_data = [
+            ["Field", "Your Entry"],
+            ["Situation", intake_data.get("trigger_situation", "Not provided")],
+            ["Automatic Thought", f'"{intake_data.get("automatic_thought", "Not provided")}"'],
+            [
+                "Initial Emotion",
+                f'{intake_data.get("emotion_data", {}).get("emotion", "Unknown")} ({intake_data.get("emotion_data", {}).get("intensity", 0)}/10)',
+            ],
+        ]
 
     situation_table = Table(situation_data, colWidths=[2 * inch, 4 * inch])
     situation_table.setStyle(
@@ -84,10 +97,12 @@ def build_pdf_bytes(intake_data: dict, analysis_output: str) -> bytes:
     story.append(situation_table)
     story.append(Spacer(1, 0.3 * inch))
 
-    # Section 2: Analysis (same as in _generate_pdf_report)
+    # Section 2: Analysis
+    story.append(Paragraph("<b>2. CBT Analysis</b>", styles["Heading2"]))
+    story.append(Spacer(1, 0.1 * inch))
+
     if analysis_data:
-        story.append(Paragraph("<b>2. Analysis: Looking at the Evidence</b>", styles["Heading2"]))
-        story.append(Spacer(1, 0.1 * inch))
+        # Handle JSON format analysis
         distortions = analysis_data.get("distortions", [])
         distortion_map = {
             "MW": "Mind Reading",
@@ -130,6 +145,22 @@ def build_pdf_bytes(intake_data: dict, analysis_output: str) -> bytes:
                     styles["Normal"],
                 )
             )
+    else:
+        # Handle plain text analysis
+        # Split analysis into paragraphs and format them
+        analysis_paragraphs = analysis_output.split("\n\n")
+        for para in analysis_paragraphs:
+            if para.strip():
+                # Check if it's a heading (starts with a number or bullet)
+                if (
+                    para.strip()[0].isdigit()
+                    or para.strip().startswith("•")
+                    or para.strip().startswith("-")
+                ):
+                    story.append(Paragraph(para.strip(), styles["Normal"]))
+                else:
+                    story.append(Paragraph(para.strip(), styles["Normal"]))
+                story.append(Spacer(1, 0.1 * inch))
 
     story.append(Spacer(1, 0.3 * inch))
 

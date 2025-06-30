@@ -13,10 +13,8 @@ logger = logging.getLogger(__name__)
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
-    _instance: "Settings | None" = None
-
     def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
+        if not hasattr(cls, "_instance") or cls._instance is None:
             try:
                 cls._instance = super().__new__(cls)
             except Exception as e:
@@ -46,6 +44,12 @@ class Settings(BaseSettings):
     google_ai_model: str = "gemini-2.0-flash-lite"
     google_ai_temperature: float = 0.7
     google_ai_max_tokens: int = 1024
+
+    # Agent Instruction Keys
+    analysis_agent_instruction_key: str = "reframe-agent-adk-instructions"
+    collect_agent_instruction_key: str = "intake-agent-adk-instructions"
+    parser_agent_instruction_key: str = "intake-parser-agent-adk-instructions"
+    synthesis_agent_instruction_key: str = "synthesis-agent-adk-instructions"
 
     # GCS Artifact Storage Configuration (OPTIONAL)
     gcs_bucket_name: str = Field(default="re-frame", alias="GCS_BUCKET_NAME")

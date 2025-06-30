@@ -1,0 +1,1640 @@
+Poe => adk api_server
+INFO:     Started server process [76273]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-30 04:00:00,608 - INFO - fast_api.py:430 - New session created: test_session_1751248800
+INFO:     127.0.0.1:50522 - "POST /apps/reframe_agent/users/test_user_1751248800/sessions/test_session_1751248800 HTTP/1.1" 200 OK
+2025-06-30 04:00:00,614 - INFO - envs.py:54 - No .env file found for reframe_agent
+2025-06-30 04:00:00,614 - INFO - envs.py:54 - No .env file found for reframe_agent
+2025-06-30 04:00:00,818 - INFO - agent_loader.py:95 - Found root_agent in reframe_agent.agent
+2025-06-30 04:00:00,819 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:00,887 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:00,887 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:00,887 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:01,810 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:01 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=830","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.17748287591067227}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":44,"candidates_tokens_details":[{"modality":"TEXT","token_count":44}],"prompt_token_count":196,"prompt_tokens_details":[{"modality":"TEXT","token_count":196}],"total_token_count":240},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:01,817 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:01,878 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:01,878 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:01,878 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:02,514 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:02 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=555","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.21987213691075644}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":24,"candidates_tokens_details":[{"modality":"TEXT","token_count":24}],"prompt_token_count":259,"prompt_tokens_details":[{"modality":"TEXT","token_count":259}],"total_token_count":283},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:02,517 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:02,566 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:02,566 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:02,566 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:03,133 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:03 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=488","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.4945289438421076}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":22,"candidates_tokens_details":[{"modality":"TEXT","token_count":22}],"prompt_token_count":283,"prompt_tokens_details":[{"modality":"TEXT","token_count":283}],"total_token_count":305},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:03,137 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:03,193 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:03,193 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:03,193 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:03,926 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:03 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=647","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.09311564763387044}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":24,"candidates_tokens_details":[{"modality":"TEXT","token_count":24}],"prompt_token_count":305,"prompt_tokens_details":[{"modality":"TEXT","token_count":305}],"total_token_count":329},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:03,935 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:03,992 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:03,992 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:03,992 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:04,668 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:04 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=598","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.2620909554617746}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":21,"candidates_tokens_details":[{"modality":"TEXT","token_count":21}],"prompt_token_count":329,"prompt_tokens_details":[{"modality":"TEXT","token_count":329}],"total_token_count":350},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:04,674 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:04,734 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:04,735 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:04,735 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:05,435 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:05 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=588","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.0846417744954427}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":24,"candidates_tokens_details":[{"modality":"TEXT","token_count":24}],"prompt_token_count":350,"prompt_tokens_details":[{"modality":"TEXT","token_count":350}],"total_token_count":374},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:05,438 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:05,476 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:05,476 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:05,476 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:06,080 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I understand. I'm ready to hear about the challenging social situation. Please share the details with me.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:06 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=527","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.40654845859693445}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":23,"candidates_tokens_details":[{"modality":"TEXT","token_count":23}],"prompt_token_count":374,"prompt_tokens_details":[{"modality":"TEXT","token_count":374}],"total_token_count":397},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:06,086 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:06,131 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:06,131 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:06,131 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:06,829 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:06 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=610","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.05447540680567423}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":24,"candidates_tokens_details":[{"modality":"TEXT","token_count":24}],"prompt_token_count":397,"prompt_tokens_details":[{"modality":"TEXT","token_count":397}],"total_token_count":421},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:06,839 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:06,890 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:06,891 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:06,891 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:07,482 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:07 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=511","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.04966203371683756}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":21,"candidates_tokens_details":[{"modality":"TEXT","token_count":21}],"prompt_token_count":421,"prompt_tokens_details":[{"modality":"TEXT","token_count":421}],"total_token_count":442},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:07,486 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:07,539 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:07,539 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:07,539 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:08,199 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I understand. I am ready to hear about the challenging social situation. Please share the details with me.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:08 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=578","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I understand. I am ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.27780420129949396}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":22,"candidates_tokens_details":[{"modality":"TEXT","token_count":22}],"prompt_token_count":442,"prompt_tokens_details":[{"modality":"TEXT","token_count":442}],"total_token_count":464},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:08,202 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:08,256 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:08,256 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I am ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:08,256 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:09,138 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:09 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=787","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.08471943083263579}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":21,"candidates_tokens_details":[{"modality":"TEXT","token_count":21}],"prompt_token_count":464,"prompt_tokens_details":[{"modality":"TEXT","token_count":464}],"total_token_count":485},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:09,145 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:09,206 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:09,206 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. I am ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:00:09,206 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:09,856 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:09 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=571","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.03491331849779401}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":21,"candidates_tokens_details":[{"modality":"TEXT","token_count":21}],"prompt_token_count":485,"prompt_tokens_details":[{"modality":"TEXT","token_count":485}],"total_token_count":506},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:00:09,860 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:00:09,908 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:00:09,908 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a JSON parser that converts the collected intake information into a structured format.
+
+Extract the following information from the conversation transcript and return it as JSON:
+{
+  "situation": "Description of the challenging social situation",
+  "thoughts": ["List of thoughts the person had"],
+  "feelings": ["List of emotions experienced"],
+  "behaviors": ["List of behaviors or responses"],
+  "outcome": "What happened and how they felt afterward",
+  "timestamp": "Current ISO timestamp"
+}
+
+Be accurate and preserve the user's own words where possible.
+
+Here is the intake conversation transcript to process:
+
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I understand. I'm ready to hear about the challenging social situation. Please share the details with me.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I understand. I am ready to hear about the challenging social situation. Please share the details with me.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am ready. Please tell me about the challenging social situation. I want to understand what happened.
+
+Please extract and structure this information as JSON as specified in the instructions.
+
+You are an agent. Your internal name is "JsonParserLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm here to listen and help you explore a challenging social situation. To start, could you tell me about the specific situation you'd like to discuss? What happened, and where did it take place?\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I will. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I understand. I'm ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I understand. I am ready to hear about the challenging social situation. Please share the details with me.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am ready. Please tell me about the challenging social situation. I want to understand what happened.\n"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-06-30 04:00:09,908 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:00:11,156 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "situation": "The user has repeatedly expressed a desire to discuss a challenging social situation, but has not yet provided any details about the situation itself.",
+  "thoughts": [
+    "The user is thinking about a challenging social situation."
+  ],
+  "feelings": [],
+  "behaviors": [
+    "The user repeatedly stated they would like to talk about a challenging social situation."
+  ],
+  "outcome": "The user has not provided any details about the situation yet.",
+  "timestamp": "2024-04-19T12:19:55.632129"
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:00:11 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=1166","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"situation\": \"The user has repeatedly expressed a desire to discuss a challenging social situation, but has not yet provided any details about the situation itself.\",\n  \"thoughts\": [\n    \"The user is thinking about a challenging social situation.\"\n  ],\n  \"feelings\": [],\n  \"behaviors\": [\n    \"The user repeatedly stated they would like to talk about a challenging social situation.\"\n  ],\n  \"outcome\": \"The user has not provided any details about the situation yet.\",\n  \"timestamp\": \"2024-04-19T12:19:55.632129\"\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.3462693985194376}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":146,"candidates_tokens_details":[{"modality":"TEXT","token_count":146}],"prompt_token_count":1107,"prompt_tokens_details":[{"modality":"TEXT","token_count":1107}],"total_token_count":1253},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+[JsonParser] Processing transcript with 24 entries
+[JsonParser] Intake transcript length: 0
+[JsonParser] Successfully parsed JSON: ['situation', 'thoughts', 'feelings', 'behaviors', 'outcome', 'timestamp']
+INFO:     127.0.0.1:50522 - "POST /run HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/cli/fast_api.py", line 784, in agent_run
+    events = [
+             ^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 203, in run_async
+    async for event in invocation_context.agent.run_async(invocation_context):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 37, in _run_async_impl
+    async for event in sub_agent.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/loop_agent.py", line 50, in _run_async_impl
+    async for event in sub_agent.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 188, in _run_async_impl
+    raise NotImplementedError(
+NotImplementedError: _run_async_impl for <class 'app.agents.analysis_llm.AnalystLLMAgent'> is not implemented.
+2025-06-30 04:01:49,222 - INFO - fast_api.py:430 - New session created: test_session_1751248909
+INFO:     127.0.0.1:51167 - "POST /apps/reframe_agent/users/test_user_1751248909/sessions/test_session_1751248909 HTTP/1.1" 200 OK
+2025-06-30 04:01:49,230 - INFO - envs.py:54 - No .env file found for reframe_agent
+2025-06-30 04:01:49,242 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:49,307 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:49,307 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:49,307 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:50,008 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:50 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=605","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.10866003036499024}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":40,"candidates_tokens_details":[{"modality":"TEXT","token_count":40}],"prompt_token_count":196,"prompt_tokens_details":[{"modality":"TEXT","token_count":196}],"total_token_count":236},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:50,011 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:50,081 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:50,081 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:50,081 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:50,907 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:50 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=723","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.2394603599201549}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":22,"candidates_tokens_details":[{"modality":"TEXT","token_count":22}],"prompt_token_count":255,"prompt_tokens_details":[{"modality":"TEXT","token_count":255}],"total_token_count":277},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:50,913 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:50,973 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:50,973 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:50,973 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:51,672 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please tell me about the challenging social situation.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:51 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=603","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.21663124421063593}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":17,"candidates_tokens_details":[{"modality":"TEXT","token_count":17}],"prompt_token_count":277,"prompt_tokens_details":[{"modality":"TEXT","token_count":277}],"total_token_count":294},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:51,678 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:51,864 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:51,864 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:51,864 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:52,607 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:52 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=647","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.36499977111816406}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":34,"candidates_tokens_details":[{"modality":"TEXT","token_count":34}],"prompt_token_count":294,"prompt_tokens_details":[{"modality":"TEXT","token_count":294}],"total_token_count":328},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:52,611 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:52,662 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:52,662 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:52,662 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:53,414 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm ready to continue. Please tell me more about the situation.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:53 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=647","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.6203712224960327}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":16,"candidates_tokens_details":[{"modality":"TEXT","token_count":16}],"prompt_token_count":328,"prompt_tokens_details":[{"modality":"TEXT","token_count":328}],"total_token_count":344},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:53,420 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:53,485 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:53,486 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:53,486 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:54,328 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I will continue gathering details about the challenging social situation.
+
+Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:54 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=748","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.22397239033768818}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":41,"candidates_tokens_details":[{"modality":"TEXT","token_count":41}],"prompt_token_count":344,"prompt_tokens_details":[{"modality":"TEXT","token_count":344}],"total_token_count":385},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:54,335 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:54,391 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:54,391 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:54,391 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:55,207 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:55 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=735","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.3093553384145101}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":36,"candidates_tokens_details":[{"modality":"TEXT","token_count":36}],"prompt_token_count":385,"prompt_tokens_details":[{"modality":"TEXT","token_count":385}],"total_token_count":421},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:55,213 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:55,271 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:55,271 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:55,271 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:56,100 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:56 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=728","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.3707519070855502}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":29,"candidates_tokens_details":[{"modality":"TEXT","token_count":29}],"prompt_token_count":421,"prompt_tokens_details":[{"modality":"TEXT","token_count":421}],"total_token_count":450},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:56,103 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:56,170 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:56,170 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"model"}
+{"parts":[{"text":"Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:56,170 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:57,122 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:57 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=868","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.24698980331420897}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":50,"candidates_tokens_details":[{"modality":"TEXT","token_count":50}],"prompt_token_count":450,"prompt_tokens_details":[{"modality":"TEXT","token_count":450}],"total_token_count":500},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:57,127 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:57,171 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:57,171 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"model"}
+{"parts":[{"text":"Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:57,172 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:58,060 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am still waiting for you to describe the challenging social situation. Please provide details about:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+Once you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome. I will then use the exit\_loop tool.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:58 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=803","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome. I will then use the exit\\_loop tool.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.11187732723397269}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":71,"candidates_tokens_details":[{"modality":"TEXT","token_count":71}],"prompt_token_count":500,"prompt_tokens_details":[{"modality":"TEXT","token_count":500}],"total_token_count":571},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:58,063 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:58,109 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:58,109 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"model"}
+{"parts":[{"text":"Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome. I will then use the exit\\_loop tool.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:58,109 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:01:59,262 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+Once you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:01:59 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=1072","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.23198190689086914}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":100,"candidates_tokens_details":[{"modality":"TEXT","token_count":100}],"prompt_token_count":571,"prompt_tokens_details":[{"modality":"TEXT","token_count":571}],"total_token_count":671},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:01:59,266 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:01:59,313 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:01:59,313 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"model"}
+{"parts":[{"text":"Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready to continue. Please tell me more about the situation.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"model"}
+{"parts":[{"text":"Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n"}],"role":"model"}
+{"parts":[{"text":"I am still waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome. I will then use the exit\\_loop tool.\n"}],"role":"model"}
+{"parts":[{"text":"I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:01:59,313 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:02:00,349 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+Once you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:02:00 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=937","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.01059448480606079}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":100,"candidates_tokens_details":[{"modality":"TEXT","token_count":100}],"prompt_token_count":671,"prompt_tokens_details":[{"modality":"TEXT","token_count":671}],"total_token_count":771},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:02:00,358 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:02:00,416 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:02:00,416 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a JSON parser that converts the collected intake information into a structured format.
+
+Extract the following information from the conversation transcript and return it as JSON:
+{
+  "situation": "Description of the challenging social situation",
+  "thoughts": ["List of thoughts the person had"],
+  "feelings": ["List of emotions experienced"],
+  "behaviors": ["List of behaviors or responses"],
+  "outcome": "What happened and how they felt afterward",
+  "timestamp": "Current ISO timestamp"
+}
+
+Be accurate and preserve the user's own words where possible.
+
+Here is the intake conversation transcript to process:
+
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please tell me about the challenging social situation.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm ready to continue. Please tell me more about the situation.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I will continue gathering details about the challenging social situation.
+
+Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am still waiting for you to describe the challenging social situation. Please provide details about:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+Once you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome. I will then use the exit\_loop tool.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+Once you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:
+
+*   Where you were
+*   Who you were with
+*   What was happening
+
+Once you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.
+
+Please extract and structure this information as JSON as specified in the instructions.
+
+You are an agent. Your internal name is "JsonParserLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm here to listen and help. Please tell me about the challenging social situation you'd like to discuss. The more details you can provide, the better I can understand what happened.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I understand. Please tell me about the challenging social situation. I'm ready to listen.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please tell me about the challenging social situation.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Great, let's begin. Can you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready to continue. Please tell me more about the situation.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I will continue gathering details about the challenging social situation.\n\nCan you describe the specific social situation that was challenging for you? Where were you? Who were you with? What was happening?\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am still waiting for you to describe the challenging social situation. Once you provide those details, I will ask you about your thoughts, feelings, behaviors, and the outcome.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Understood. I'm ready to proceed. Please describe the challenging social situation. I'm here to listen and gather the details needed.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I will continue to process the previous requests as instructed. I am waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am still waiting for you to describe the challenging social situation. Please provide details about:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome. I will then use the exit\\_loop tool.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am designed to gather information about a challenging social situation. I need you to provide details about a specific situation, including:\n\n*   Where you were\n*   Who you were with\n*   What was happening\n\nOnce you provide those details, I can ask you about your thoughts, feelings, behaviors, and the outcome, and then use the exit\\_loop tool. Since I have not received that information, I cannot proceed. Please provide the requested details so I can help you.\n"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-06-30 04:02:00,416 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:02:01,842 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "situation": "The user has not yet provided a description of a challenging social situation. The user repeatedly stated their desire to discuss a challenging social situation but did not provide any details about the situation itself.",
+  "thoughts": [],
+  "feelings": [],
+  "behaviors": [],
+  "outcome": "The conversation did not progress past the initial request for information about the challenging social situation. No outcome was provided.",
+  "timestamp": "2024-02-29T18:43:52.349187"
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:02:01 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=1341","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"situation\": \"The user has not yet provided a description of a challenging social situation. The user repeatedly stated their desire to discuss a challenging social situation but did not provide any details about the situation itself.\",\n  \"thoughts\": [],\n  \"feelings\": [],\n  \"behaviors\": [],\n  \"outcome\": \"The conversation did not progress past the initial request for information about the challenging social situation. No outcome was provided.\",\n  \"timestamp\": \"2024-02-29T18:43:52.349187\"\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.3551426227276142}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":130,"candidates_tokens_details":[{"modality":"TEXT","token_count":130}],"prompt_token_count":1639,"prompt_tokens_details":[{"modality":"TEXT","token_count":1639}],"total_token_count":1769},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+[JsonParser] Processing transcript with 24 entries
+[JsonParser] Intake transcript length: 0
+[JsonParser] Successfully parsed JSON: ['situation', 'thoughts', 'feelings', 'behaviors', 'outcome', 'timestamp']
+INFO:     127.0.0.1:51167 - "POST /run HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/cli/fast_api.py", line 784, in agent_run
+    events = [
+             ^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 203, in run_async
+    async for event in invocation_context.agent.run_async(invocation_context):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 37, in _run_async_impl
+    async for event in sub_agent.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/loop_agent.py", line 50, in _run_async_impl
+    async for event in sub_agent.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 188, in _run_async_impl
+    raise NotImplementedError(
+NotImplementedError: _run_async_impl for <class 'app.agents.analysis_llm.AnalystLLMAgent'> is not implemented.
+INFO:     127.0.0.1:51270 - "GET /debug/trace/session/test_session_1751248909 HTTP/1.1" 200 OK

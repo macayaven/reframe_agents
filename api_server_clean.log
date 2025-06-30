@@ -1,0 +1,963 @@
+Poe => adk api_server
+INFO:     Started server process [80749]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-30 04:03:25,873 - INFO - fast_api.py:430 - New session created: test_session_1751249005
+INFO:     127.0.0.1:51693 - "POST /apps/reframe_agent/users/test_user_1751249005/sessions/test_session_1751249005 HTTP/1.1" 200 OK
+2025-06-30 04:03:25,882 - INFO - envs.py:54 - No .env file found for reframe_agent
+2025-06-30 04:03:25,882 - INFO - envs.py:54 - No .env file found for reframe_agent
+2025-06-30 04:03:26,082 - INFO - agent_loader.py:95 - Found root_agent in reframe_agent.agent
+2025-06-30 04:03:26,084 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:26,152 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:26,152 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:26,152 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:26,989 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:27 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=746","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.19445880623750908}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":43,"candidates_tokens_details":[{"modality":"TEXT","token_count":43}],"prompt_token_count":196,"prompt_tokens_details":[{"modality":"TEXT","token_count":196}],"total_token_count":239},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:26,995 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:27,054 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:27,054 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:27,054 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:27,822 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:27 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=687","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.14758466637652853}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":23,"candidates_tokens_details":[{"modality":"TEXT","token_count":23}],"prompt_token_count":258,"prompt_tokens_details":[{"modality":"TEXT","token_count":258}],"total_token_count":281},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:27,827 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:27,892 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:27,892 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:27,892 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:28,755 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:28 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=782","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.179915604767976}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":27,"candidates_tokens_details":[{"modality":"TEXT","token_count":27}],"prompt_token_count":281,"prompt_tokens_details":[{"modality":"TEXT","token_count":281}],"total_token_count":308},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:28,759 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:28,810 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:28,810 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:28,810 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:29,461 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:29 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=574","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.5549395765577044}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":28,"candidates_tokens_details":[{"modality":"TEXT","token_count":28}],"prompt_token_count":308,"prompt_tokens_details":[{"modality":"TEXT","token_count":308}],"total_token_count":336},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:29,466 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:29,528 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:29,528 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:29,528 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:30,206 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I understand. Please, tell me about the challenging social situation. I'm ready when you are.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:30 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=536","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.24820182540199973}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":22,"candidates_tokens_details":[{"modality":"TEXT","token_count":22}],"prompt_token_count":336,"prompt_tokens_details":[{"modality":"TEXT","token_count":336}],"total_token_count":358},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:30,211 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:30,276 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:30,276 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:30,276 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:31,228 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:31 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=786","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.14492564541952951}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":28,"candidates_tokens_details":[{"modality":"TEXT","token_count":28}],"prompt_token_count":358,"prompt_tokens_details":[{"modality":"TEXT","token_count":358}],"total_token_count":386},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:31,233 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:31,291 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:31,291 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:31,291 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:31,903 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm ready. Please, describe the challenging social situation you'd like to talk about.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:31 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=535","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.2128069287254697}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":21,"candidates_tokens_details":[{"modality":"TEXT","token_count":21}],"prompt_token_count":386,"prompt_tokens_details":[{"modality":"TEXT","token_count":386}],"total_token_count":407},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:31,909 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:31,972 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:31,972 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:31,972 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:32,666 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:32 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=612","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.1484576830497155}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":26,"candidates_tokens_details":[{"modality":"TEXT","token_count":26}],"prompt_token_count":407,"prompt_tokens_details":[{"modality":"TEXT","token_count":407}],"total_token_count":433},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:32,676 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:32,730 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:32,731 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:32,731 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:33,482 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:33 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=577","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.2695405571549027}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":27,"candidates_tokens_details":[{"modality":"TEXT","token_count":27}],"prompt_token_count":433,"prompt_tokens_details":[{"modality":"TEXT","token_count":433}],"total_token_count":460},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:33,488 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:33,551 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:33,551 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:33,551 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:34,186 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:34 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=547","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.360860718621148}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":27,"candidates_tokens_details":[{"modality":"TEXT","token_count":27}],"prompt_token_count":460,"prompt_tokens_details":[{"modality":"TEXT","token_count":460}],"total_token_count":487},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:34,189 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:34,233 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:34,233 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:34,233 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:34,819 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:34 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=491","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.14638600899622992}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":26,"candidates_tokens_details":[{"modality":"TEXT","token_count":26}],"prompt_token_count":487,"prompt_tokens_details":[{"modality":"TEXT","token_count":487}],"total_token_count":513},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:34,825 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:34,885 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:34,886 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a compassionate intake specialist helping users describe their challenging social situations.
+
+Your goal is to gather detailed information about:
+1. The specific social situation that was challenging
+2. Their thoughts and feelings during the situation
+3. How they responded or what behaviors they engaged in
+4. The outcome and how they felt afterward
+
+Guidelines:
+- Be empathetic and non-judgmental
+- Ask clarifying questions to get specific details
+- Help them identify thoughts, feelings, and behaviors
+- Once you have a complete picture, use the exit_loop tool to proceed
+
+IMPORTANT: Call exit_loop ONLY when you have gathered sufficient details about the situation, thoughts, feelings, behaviors, and outcomes.
+
+You are an agent. Your internal name is "CollectorLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"model"}
+{"parts":[{"text":"I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.\n"}],"role":"model"}
+{"parts":[{"text":"Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.\n"}],"role":"model"}
+{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"model"}
+{"parts":[{"text":"Continue processing previous requests as instructed. Exit or provide a summary if no more outputs are needed."}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_exit_loop: {} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:34,886 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:35,647 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen and help you process this.
+
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:35 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=680","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen and help you process this.\n"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.1733367226340554}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":33,"candidates_tokens_details":[{"modality":"TEXT","token_count":33}],"prompt_token_count":513,"prompt_tokens_details":[{"modality":"TEXT","token_count":513}],"total_token_count":546},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:35,653 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:35,717 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:35,718 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a JSON parser that converts the collected intake information into a structured format.
+
+Extract the following information from the conversation transcript and return it as JSON:
+{
+  "situation": "Description of the challenging social situation",
+  "thoughts": ["List of thoughts the person had"],
+  "feelings": ["List of emotions experienced"],
+  "behaviors": ["List of behaviors or responses"],
+  "outcome": "What happened and how they felt afterward",
+  "timestamp": "Current ISO timestamp"
+}
+
+Be accurate and preserve the user's own words where possible.
+
+Here is the intake conversation transcript to process:
+
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I understand. Please, tell me about the challenging social situation. I'm ready when you are.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm ready. Please, describe the challenging social situation you'd like to talk about.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.
+user: Hello, I'd like to talk about a challenging social situation.
+assistant: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen and help you process this.
+
+Please extract and structure this information as JSON as specified in the instructions.
+
+You are an agent. Your internal name is "JsonParserLLM".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen and help you process this.\n"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-06-30 04:03:35,718 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:37,370 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "situation": "The user repeatedly stated they wanted to talk about a challenging social situation but did not provide any details about the situation itself.",
+  "thoughts": [],
+  "feelings": [],
+  "behaviors": [
+    "Repeatedly stated the desire to discuss a challenging social situation.",
+    "Did not provide any details about the situation despite repeated prompts from the assistant."
+  ],
+  "outcome": "The user did not describe a challenging social situation, therefore no outcome can be derived.",
+  "timestamp": "2024-05-01T15:51:04.499796"
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:37 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=1537","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"situation\": \"The user repeatedly stated they wanted to talk about a challenging social situation but did not provide any details about the situation itself.\",\n  \"thoughts\": [],\n  \"feelings\": [],\n  \"behaviors\": [\n    \"Repeatedly stated the desire to discuss a challenging social situation.\",\n    \"Did not provide any details about the situation despite repeated prompts from the assistant.\"\n  ],\n  \"outcome\": \"The user did not describe a challenging social situation, therefore no outcome can be derived.\",\n  \"timestamp\": \"2024-05-01T15:51:04.499796\"\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.3159570951719542}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":148,"candidates_tokens_details":[{"modality":"TEXT","token_count":148}],"prompt_token_count":1187,"prompt_tokens_details":[{"modality":"TEXT","token_count":1187}],"total_token_count":1335},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-06-30 04:03:37,377 - WARNING - _api_client.py:107 - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-06-30 04:03:37,438 - INFO - google_llm.py:90 - Sending out request, model: gemini-2.0-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-06-30 04:03:37,438 - INFO - google_llm.py:96 - 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+You are a CBT-trained analyst specializing in cognitive reframing for social anxiety.
+
+Analyze the parsed intake data and provide:
+1. Identification of cognitive distortions (e.g., mind reading, catastrophizing, all-or-nothing thinking)
+2. Evidence for and against the negative thoughts
+3. More balanced, realistic alternative thoughts
+4. Behavioral suggestions for similar future situations
+5. Validation of the person's experience while offering hope
+
+Structure your analysis clearly with sections for each component.
+Be compassionate, evidence-based, and practical in your suggestions.
+
+IMPORTANT: When your analysis is complete and refined, use the save_analysis tool to save it. Pass your complete CBT analysis as the 'analysis' parameter to save_analysis tool.
+
+Here is the structured intake data to analyze:
+
+{
+  "situation": "The user repeatedly stated they wanted to talk about a challenging social situation but did not provide any details about the situation itself.",
+  "thoughts": [],
+  "feelings": [],
+  "behaviors": [
+    "Repeatedly stated the desire to discuss a challenging social situation.",
+    "Did not provide any details about the situation despite repeated prompts from the assistant."
+  ],
+  "outcome": "The user did not describe a challenging social situation, therefore no outcome can be derived.",
+  "timestamp": "2024-05-01T15:51:04.499796"
+}
+
+Please provide a comprehensive CBT analysis as specified in the instructions.
+
+You are an agent. Your internal name is "AnalystLLMCore".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hello, I'd like to talk about a challenging social situation."}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm here to listen and help you process this. Please, tell me about the social situation that was challenging for you. The more details you can provide, the better I can understand and offer support.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I understand. Please, tell me about the challenging social situation. What happened? Where were you? Who was involved?\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'll be listening carefully.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I understand. Please, tell me about the challenging social situation. I'm ready when you are.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I am ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: Okay, I understand. I am ready when you are. Please describe the challenging social situation you'd like to talk about.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm listening.\n"}],"role":"user"}
+{"parts":[{"text":"For context:"},{"text":"[CollectorLLM] said: I'm ready. Please, describe the challenging social situation you'd like to talk about. I'm here to listen and help you process this.\n"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+_save_analysis: {'analysis': {'type': <Type.STRING: 'STRING'>}} 
+-----------------------------------------------------------
+
+2025-06-30 04:03:37,438 - INFO - models.py:7415 - AFC is enabled with max remote calls: 10.
+2025-06-30 04:03:46,664 - WARNING - types.py:4919 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-06-30 04:03:46,666 - INFO - google_llm.py:175 - 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Okay, I understand you're finding it difficult to describe a challenging social situation. It's completely normal to feel stuck or unsure where to begin, especially when dealing with something that causes you distress. Let's break down why this might be happening and how we can move forward.
+
+Here's a CBT analysis based on the information provided (which is limited, but we'll work with what we have):
+
+**1. Identification of Cognitive Distortions:**
+
+Given the data, it's difficult to pinpoint specific cognitive distortions without knowing the situation itself. However, the hesitation to share details *could* be related to:
+
+*   **Avoidance:** Avoiding the topic entirely, which is a common response to anxiety.
+*   **Fear of Judgment:** Worrying about being judged or criticized for the situation.
+*   **Emotional Reasoning:** Assuming that because it *feels* difficult to talk about, the situation *is* inherently difficult or shameful.
+
+**2. Evidence For and Against Negative Thoughts:**
+
+Since we don't have the specifics, we can't assess specific negative thoughts. However, let's consider a *hypothetical* scenario to illustrate the process. Let's say the user *might* be thinking, "If I tell the story, people will think I'm awkward."
+
+*   **Evidence *for* the thought:** This is based on the user's internal feelings of anxiety around social situations.
+*   **Evidence *against* the thought:** The user does not have the information to support these thoughts. We do not know the details of the situation, therefore, it is not possible to determine if people would perceive them as "awkward." Also, it's impossible to know what others will think. Many people are understanding and empathetic. Many people have experienced their own awkward situations.
+
+**3. More Balanced, Realistic Alternative Thoughts:**
+
+Again, using a hypothetical, here's how we could reframe the thought "If I tell the story, people will think I'm awkward":
+
+*   "It's okay if I feel awkward. It's a normal human emotion."
+*   "The people I trust are likely to be understanding and supportive, regardless."
+*   "Sharing the story might actually help me feel less alone and process the situation."
+*   "Even if someone *does* judge me (which is unlikely), it doesn't invalidate my experience or make me a bad person."
+*   "I don't need everyone to like me; I need to be kind to myself."
+
+**4. Behavioral Suggestions for Future Situations:**
+
+Given the current data, the primary behavioral suggestion is to *start small*:
+
+*   **Break it Down:** Try to identify *one* specific aspect of the social situation to share first. Start with the basics (where, who, what) and see how you feel.
+*   **Practice:** Practice describing the situation out loud to yourself. This can help you become more comfortable with the narrative.
+*   **Journaling:** Write about the situation in a journal. This can help you organize your thoughts and feelings.
+*   **Gradual Exposure:** If possible, in the future, practice talking about similar situations, gradually increasing the level of detail you share.
+*   **Choose a Safe Person:** Share the situation with someone you trust and feel comfortable with.
+
+**5. Validation and Offering Hope:**
+
+It's completely understandable to feel hesitant about sharing a challenging social situation. It takes courage to even *consider* discussing it. It's okay to feel stuck or unsure where to start. Many people struggle with social anxiety, and it's a very common experience.
+
+Remember, you're not alone. The fact that you're even considering talking about it is a positive step. With patience and practice, and by starting small, you can work through this. We can work through this together, piece by piece, when you are ready.
+
+
+-----------------------------------------------------------
+Function calls:
+name: _save_analysis, args: {'analysis': '**CBT Analysis:**\n\n**1. Identification of Cognitive Distortions:**\n\n*   **Avoidance:** Avoiding the topic entirely, which is a common response to anxiety.\n*   **Fear of Judgment:** Worrying about being judged or criticized for the situation.\n*   **Emotional Reasoning:** Assuming that because it *feels* difficult to talk about, the situation *is* inherently difficult or shameful.\n\n**2. Evidence For and Against Negative Thoughts:**\n\n*   Since we don\'t have the specifics, we can\'t assess specific negative thoughts. However, let\'s consider a *hypothetical* scenario to illustrate the process. Let\'s say the user *might* be thinking, "If I tell the story, people will think I\'m awkward."\n    *   **Evidence *for* the thought:** This is based on the user\'s internal feelings of anxiety around social situations.\n    *   **Evidence *against* the thought:** The user does not have the information to support these thoughts. We do not know the details of the situation, therefore, it is not possible to determine if people would perceive them as "awkward." Also, it\'s impossible to know what others will think. Many people are understanding and empathetic. Many people have experienced their own awkward situations.\n\n**3. More Balanced, Realistic Alternative Thoughts:**\n\n*   Again, using a hypothetical, here\'s how we could reframe the thought "If I tell the story, people will think I\'m awkward":\n    *   "It\'s okay if I feel awkward. It\'s a normal human emotion."\n    *   "The people I trust are likely to be understanding and supportive, regardless."\n    *   "Sharing the story might actually help me feel less alone and process the situation."\n    *   "Even if someone *does* judge me (which is unlikely), it doesn\'t invalidate my experience or make me a bad person."\n    *   "I don\'t need everyone to like me; I need to be kind to myself."\n\n**4. Behavioral Suggestions for Future Situations:**\n\n*   Given the current data, the primary behavioral suggestion is to *start small*:\n    *   **Break it Down:** Try to identify *one* specific aspect of the social situation to share first. Start with the basics (where, who, what) and see how you feel.\n    *   **Practice:** Practice describing the situation out loud to yourself. This can help you become more comfortable with the narrative.\n    *   **Journaling:** Write about the situation in a journal. This can help you organize your thoughts and feelings.\n    *   **Gradual Exposure:** If possible, in the future, practice talking about similar situations, gradually increasing the level of detail you share.\n    *   **Choose a Safe Person:** Share the situation with someone you trust and feel comfortable with.\n\n**5. Validation and Offering Hope:**\n\n*   It\'s completely understandable to feel hesitant about sharing a challenging social situation. It takes courage to even *consider* discussing it. It\'s okay to feel stuck or unsure where to start. Many people struggle with social anxiety, and it\'s a very common experience.\n\nRemember, you\'re not alone. The fact that you\'re even considering talking about it is a positive step. With patience and practice, and by starting small, you can work through this. We can work through this together, piece by piece, when you are ready.'}
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"Content-Type":"application/json; charset=UTF-8","Vary":"Referer","Content-Encoding":"gzip","Date":"Mon, 30 Jun 2025 02:03:46 GMT","Server":"scaffolding on HTTPServer2","X-XSS-Protection":"0","X-Frame-Options":"SAMEORIGIN","X-Content-Type-Options":"nosniff","Server-Timing":"gfet4t7; dur=9114","Alt-Svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","Transfer-Encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Okay, I understand you're finding it difficult to describe a challenging social situation. It's completely normal to feel stuck or unsure where to begin, especially when dealing with something that causes you distress. Let's break down why this might be happening and how we can move forward.\n\nHere's a CBT analysis based on the information provided (which is limited, but we'll work with what we have):\n\n**1. Identification of Cognitive Distortions:**\n\nGiven the data, it's difficult to pinpoint specific cognitive distortions without knowing the situation itself. However, the hesitation to share details *could* be related to:\n\n*   **Avoidance:** Avoiding the topic entirely, which is a common response to anxiety.\n*   **Fear of Judgment:** Worrying about being judged or criticized for the situation.\n*   **Emotional Reasoning:** Assuming that because it *feels* difficult to talk about, the situation *is* inherently difficult or shameful.\n\n**2. Evidence For and Against Negative Thoughts:**\n\nSince we don't have the specifics, we can't assess specific negative thoughts. However, let's consider a *hypothetical* scenario to illustrate the process. Let's say the user *might* be thinking, \"If I tell the story, people will think I'm awkward.\"\n\n*   **Evidence *for* the thought:** This is based on the user's internal feelings of anxiety around social situations.\n*   **Evidence *against* the thought:** The user does not have the information to support these thoughts. We do not know the details of the situation, therefore, it is not possible to determine if people would perceive them as \"awkward.\" Also, it's impossible to know what others will think. Many people are understanding and empathetic. Many people have experienced their own awkward situations.\n\n**3. More Balanced, Realistic Alternative Thoughts:**\n\nAgain, using a hypothetical, here's how we could reframe the thought \"If I tell the story, people will think I'm awkward\":\n\n*   \"It's okay if I feel awkward. It's a normal human emotion.\"\n*   \"The people I trust are likely to be understanding and supportive, regardless.\"\n*   \"Sharing the story might actually help me feel less alone and process the situation.\"\n*   \"Even if someone *does* judge me (which is unlikely), it doesn't invalidate my experience or make me a bad person.\"\n*   \"I don't need everyone to like me; I need to be kind to myself.\"\n\n**4. Behavioral Suggestions for Future Situations:**\n\nGiven the current data, the primary behavioral suggestion is to *start small*:\n\n*   **Break it Down:** Try to identify *one* specific aspect of the social situation to share first. Start with the basics (where, who, what) and see how you feel.\n*   **Practice:** Practice describing the situation out loud to yourself. This can help you become more comfortable with the narrative.\n*   **Journaling:** Write about the situation in a journal. This can help you organize your thoughts and feelings.\n*   **Gradual Exposure:** If possible, in the future, practice talking about similar situations, gradually increasing the level of detail you share.\n*   **Choose a Safe Person:** Share the situation with someone you trust and feel comfortable with.\n\n**5. Validation and Offering Hope:**\n\nIt's completely understandable to feel hesitant about sharing a challenging social situation. It takes courage to even *consider* discussing it. It's okay to feel stuck or unsure where to start. Many people struggle with social anxiety, and it's a very common experience.\n\nRemember, you're not alone. The fact that you're even considering talking about it is a positive step. With patience and practice, and by starting small, you can work through this. We can work through this together, piece by piece, when you are ready.\n\n"},{"function_call":{"args":{"analysis":"**CBT Analysis:**\n\n**1. Identification of Cognitive Distortions:**\n\n*   **Avoidance:** Avoiding the topic entirely, which is a common response to anxiety.\n*   **Fear of Judgment:** Worrying about being judged or criticized for the situation.\n*   **Emotional Reasoning:** Assuming that because it *feels* difficult to talk about, the situation *is* inherently difficult or shameful.\n\n**2. Evidence For and Against Negative Thoughts:**\n\n*   Since we don't have the specifics, we can't assess specific negative thoughts. However, let's consider a *hypothetical* scenario to illustrate the process. Let's say the user *might* be thinking, \"If I tell the story, people will think I'm awkward.\"\n    *   **Evidence *for* the thought:** This is based on the user's internal feelings of anxiety around social situations.\n    *   **Evidence *against* the thought:** The user does not have the information to support these thoughts. We do not know the details of the situation, therefore, it is not possible to determine if people would perceive them as \"awkward.\" Also, it's impossible to know what others will think. Many people are understanding and empathetic. Many people have experienced their own awkward situations.\n\n**3. More Balanced, Realistic Alternative Thoughts:**\n\n*   Again, using a hypothetical, here's how we could reframe the thought \"If I tell the story, people will think I'm awkward\":\n    *   \"It's okay if I feel awkward. It's a normal human emotion.\"\n    *   \"The people I trust are likely to be understanding and supportive, regardless.\"\n    *   \"Sharing the story might actually help me feel less alone and process the situation.\"\n    *   \"Even if someone *does* judge me (which is unlikely), it doesn't invalidate my experience or make me a bad person.\"\n    *   \"I don't need everyone to like me; I need to be kind to myself.\"\n\n**4. Behavioral Suggestions for Future Situations:**\n\n*   Given the current data, the primary behavioral suggestion is to *start small*:\n    *   **Break it Down:** Try to identify *one* specific aspect of the social situation to share first. Start with the basics (where, who, what) and see how you feel.\n    *   **Practice:** Practice describing the situation out loud to yourself. This can help you become more comfortable with the narrative.\n    *   **Journaling:** Write about the situation in a journal. This can help you organize your thoughts and feelings.\n    *   **Gradual Exposure:** If possible, in the future, practice talking about similar situations, gradually increasing the level of detail you share.\n    *   **Choose a Safe Person:** Share the situation with someone you trust and feel comfortable with.\n\n**5. Validation and Offering Hope:**\n\n*   It's completely understandable to feel hesitant about sharing a challenging social situation. It takes courage to even *consider* discussing it. It's okay to feel stuck or unsure where to start. Many people struggle with social anxiety, and it's a very common experience.\n\nRemember, you're not alone. The fact that you're even considering talking about it is a positive step. With patience and practice, and by starting small, you can work through this. We can work through this together, piece by piece, when you are ready."},"name":"_save_analysis"}}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.29813825938853034}],"model_version":"gemini-2.0-flash-lite","usage_metadata":{"candidates_token_count":1559,"candidates_tokens_details":[{"modality":"TEXT","token_count":1559}],"prompt_token_count":839,"prompt_tokens_details":[{"modality":"TEXT","token_count":839}],"total_token_count":2398},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+[JsonParser] Processing transcript with 24 entries
+[JsonParser] Intake transcript length: 0
+[JsonParser] Successfully parsed JSON: ['situation', 'thoughts', 'feelings', 'behaviors', 'outcome', 'timestamp']
+  [Tool Call] save_analysis triggered by AnalystLLMCore
+INFO:     127.0.0.1:51693 - "POST /run HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/cli/fast_api.py", line 784, in agent_run
+    events = [
+             ^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 203, in run_async
+    async for event in invocation_context.agent.run_async(invocation_context):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/sequential_agent.py", line 37, in _run_async_impl
+    async for event in sub_agent.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/loop_agent.py", line 50, in _run_async_impl
+    async for event in sub_agent.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/app/agents/analysis_llm.py", line 57, in _run_async_impl
+    async for llm_event in llm.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 147, in run_async
+    async for event in self._run_async_impl(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 275, in _run_async_impl
+    async for event in self._llm_flow.run_async(ctx):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 282, in run_async
+    async for event in self._run_one_step_async(invocation_context):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 318, in _run_one_step_async
+    async for event in self._postprocess_async(
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 390, in _postprocess_async
+    async for event in self._postprocess_handle_function_calls_async(
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 465, in _postprocess_handle_function_calls_async
+    if function_response_event := await functions.handle_function_calls_async(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/functions.py", line 168, in handle_function_calls_async
+    function_response = await __call_tool_async(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/functions.py", line 449, in __call_tool_async
+    return await tool.run_async(args=args, tool_context=tool_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/tools/function_tool.py", line 112, in run_async
+    return self.func(**args_to_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/app/tools/save_analysis.py", line 15, in _save_analysis
+    session = tool_context.invocation_context.session
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ToolContext' object has no attribute 'invocation_context'. Did you mean: '_invocation_context'?
+2025-06-30 04:03:46,693 - ERROR - __init__.py:157 - Failed to detach context
+Traceback (most recent call last):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/opentelemetry/trace/__init__.py", line 589, in use_span
+    yield span
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/opentelemetry/sdk/trace/__init__.py", line 1105, in start_as_current_span
+    yield span
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/opentelemetry/trace/__init__.py", line 454, in start_as_current_span
+    yield span
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 556, in _call_llm_async
+    yield llm_response
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/opentelemetry/context/__init__.py", line 155, in detach
+    _RUNTIME_CONTEXT.detach(token)
+  File "/Users/carlos/workspace/reframe_agents_cloudandcarlos/.venv/lib/python3.12/site-packages/opentelemetry/context/contextvars_context.py", line 53, in detach
+    self._current_context.reset(token)
+ValueError: <Token var=<ContextVar name='current_context' default={} at 0x107b31f30> at 0x148ec4b00> was created in a different Context
